@@ -1,0 +1,155 @@
+/* General Page Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F7E7EB;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.edit-name-page {
+    background-color: #F7E7EB;
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.15) 1px, transparent 1px);
+    background-size: 400px 40px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+/* Header */
+.edit-name-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.edit-name-back-button {
+    background-color: white !important;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
+    border: 1px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid black;
+}
+
+.edit-name-header h2 {
+    flex-grow: 1;
+    font-size: 1.3em;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Instructions */
+.edit-name-context-container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.edit-name-instructions {
+    color: #888;
+    font-size: 0.95em;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    line-height: 1.4;
+}
+
+/* Input Container */
+.edit-name-input-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.edit-name-input-container input {
+    flex-grow: 1;
+    max-width: 45%;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Confirm Button */
+.edit-name-confirm-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-bottom: 4px solid black;
+}
+
+.edit-name-confirm-button:hover {
+    background-color: #5c0aa7;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 480px) {
+    .edit-name-page {
+        padding: 10px;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .edit-name-input-container input {
+        padding: 12px;
+        margin: 0;
+    }
+
+    .edit-name-confirm-button {
+        margin: 0;
+    }
+}
+.edit-name-confirm-button.disabled {
+    background-color: #ccc; /* Greyed out color */
+    cursor: not-allowed;
+    color: #666; /* Text color for disabled state */
+}
+
+.edit-name-confirm-button.active {
+    background-color: #6a0dad; /* Active color */
+    cursor: pointer;
+    color: white;
+}

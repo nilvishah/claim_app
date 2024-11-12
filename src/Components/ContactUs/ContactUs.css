@@ -1,0 +1,136 @@
+.contact-us {
+    display: flex;
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.15) 1px, transparent 1px);
+    background-size: 400px 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribute space evenly */
+    padding: 30px;
+    background-color: #F7E7EB;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.contact-us-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.back-button {
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.contact-us-header h2 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.sun-emoji {
+    width: 80px;
+    height: 80px;
+    margin: 20px 0;
+}
+
+.contact-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 20px; */
+    margin-bottom: auto;
+    width: 100%;
+    max-width: 320px;
+}
+
+.contact-content h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contact-description {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    color: #333;
+    width: 100%; /* Use full width of the container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-description p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin-top: auto;
+    padding-bottom: 2px;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin-top: auto; /* Push buttons to the bottom */
+    padding-top: 20px;
+}
+
+.primary-button {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-button {
+    background: white;
+    color: black;
+    border: 1px solid #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+}
+
+.delete-account {
+    background: none;
+    color: #6A0DAD;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px;
+}

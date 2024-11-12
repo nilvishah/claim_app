@@ -1,0 +1,175 @@
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px 40px;
+    background-color: #F7E7EB;
+    font-family: Arial, sans-serif;
+  }
+  
+  .link-card-header {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    /* padding-top: 10px; */
+  }
+  
+  .back-button {
+    font-size: 1.5rem;
+    border: none;
+    background-color: #F0F0F0; /* Button background color */
+    color: black; /* Button text color */
+    cursor: pointer;
+    border-radius: 50%; /* Circular button */
+    padding: 5px; /* Padding for the button */
+    margin-right: 10px; /* Adds some space between the button and the title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Set a specific width */
+    height: 36px; /* Set a specific height */
+    border-bottom: 4px solid black; /* Black bottom border */
+    
+  }
+  
+  .link-card-header h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0px;
+    flex-grow: 1;
+  }
+  
+  .card-stack-image {
+    width: 90px;
+    height: auto;
+    margin: 20px 0;
+  }
+  .link-card-content{
+    flex-grow: 1;
+  }
+  .link-card-content h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .link-card-content p {
+    text-align: center;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .link-another-card-button {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 14px 98px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+  }
+  
+  .bank-info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 320px;
+    margin: 20px 0;
+    text-align: left;
+  }
+  .bank-info-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .bank-info-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: left;
+    left: 100%;
+    width: 100%;
+    /* margin-bottom: 10px; */
+   }
+  .bank-name {
+    /* display: flex; */
+    flex-direction: column;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .last-detected,
+  .transaction-date {
+    color: #888;
+    margin: 4px 0;
+    font-size: 0.9rem;
+  }
+  
+  .bank-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* justify-content: space-between; Place buttons side by side */
+    gap:10px;
+    margin-left: 20px;
+    /* margin-top: 10px; */
+  }
+  
+  .update-button,
+  .remove-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 100px; /* Ensures buttons take equal width and are aligned side-by-side */
+  }
+  
+  .update-button {
+    background-color: #6A0DAD;
+    color: white;
+  }
+  
+  .remove-button {
+    background-color: #F0F0F0;
+    color: black;
+  }
+  
+  .footer-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 260px;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .data-promise-button,
+  .get-help-button {
+    background: white;
+    color: #6A0DAD;
+    border: 1px solid #6A0DAD;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 100%; /* Takes full width of footer-buttons */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

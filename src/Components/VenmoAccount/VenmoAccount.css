@@ -1,0 +1,158 @@
+/* VenmoAccount.css */
+
+.venmo-account {
+    display: flex;
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.15) 1px, transparent 1px);
+    background-size: 400px 40px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #F7E7EB;
+    height: 100vh;
+    /* justify-content: center;  */
+    box-sizing: border-box;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    position: absolute;
+    left: 0;
+    background: white !important;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.venmo-logo {
+    width: 80px;
+    height: 80px;
+    margin: 20px 0;
+}
+
+h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    font-size: 0.9em;
+    text-align: left;
+    max-width: 300px;
+    width: 100%;
+    margin: 10px 0;
+    margin: 20px 0 40px; /* Adjusted to add more space between description and label */
+}
+
+label {
+    align-self: flex-start;
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: black; /* Light font color */
+    margin-bottom: 5px;
+    max-width: 300px;
+}
+
+input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Adjust this width to control the length */
+    margin: 10px 0;
+}
+
+.input-container label {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.help-button {
+    background-color: white;
+    color: #6a0dad;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-button {
+    background-color: #6a0dad;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    align-self: center;
+    position: absolute;
+    bottom: 20px; /* Position it at the bottom of the page */
+}
+.confirm-button.disabled {
+    background-color: #ccc; /* Greyed out color */
+    cursor: not-allowed;
+    color: #666; /* Text color for disabled state */
+}
+
+.confirm-button.active {
+    background-color: #6a0dad; /* Active color */
+    cursor: pointer;
+    color: white;
+}

@@ -1,0 +1,174 @@
+/* General Page Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F7E7EB;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.edit-username-page {
+    background-color: #F7E7EB;
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header */
+.edit-username-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.edit-username-back-button {
+    position: absolute;
+    margin-top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    border-bottom: 4px solid black;
+}
+
+.edit-username-header h2 {
+    margin-top: 10px;
+    font-size: 0.9em;
+    margin: 10 0 15px 0;
+    color: #333;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: lighter;
+}
+
+/* Instructions */
+.edit-username-instructions, .edit-username-sub-instructions {
+    color: #888;
+    font-size: 0.95em;
+    text-align: center;
+    margin: 25px 0;
+    line-height: 1.4;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    max-width: 90%;
+}
+/* Form Styles */
+.edit-username-form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.edit-username-form-group label {
+    font-size: 0.9em;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-username-form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Confirm Button */
+.edit-username-confirm-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid black;
+    border-bottom: 4px solid black;
+    margin-top: auto;
+}
+
+.edit-username-confirm-button:hover {
+    background-color: #5c0aa7;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 480px) {
+    .edit-username-page {
+        max-width: 100%;
+        padding: 15px;
+        height: auto;
+        border-radius: 0;
+        min-height: 100vh;
+        justify-content: flex-start;
+    }
+    .edit-username-form-group {
+        padding: 0;
+    }
+    .edit-username-form-group input {
+        padding: 12px;
+        width: calc(100% - 20px);
+        margin: auto;
+        width: 100%;
+    }
+
+    .edit-username-confirm-button {
+        margin: 0 auto 20px auto;
+        width: calc(100% - 20px);
+    }
+}
+.edit-username-confirm-button.disabled {
+    background-color: #ccc; /* Greyed out color */
+    cursor: not-allowed;
+    color: #666; /* Text color for disabled state */
+}
+
+.edit-username-confirm-button.active {
+    background-color: #6a0dad; /* Active color */
+    cursor: pointer;
+    color: white;
+}

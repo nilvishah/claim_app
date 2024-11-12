@@ -1,0 +1,413 @@
+/* Parent container style */
+#root, .App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center the App container */
+    align-items: center; /* Align to the top */
+}
+
+
+/* Settings.css */
+.settings {
+    padding: 0 30px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F7E7EB; /* Light pink background */
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh; /*Ensures the container takes the full height of the viewport */
+    padding-top: 20px; /* Adds space below the header so content doesn't overlap */
+    
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 4px 10px; */
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 4000px; /* Matches the main container width */
+    background-color: #F7E7EB; /* Matches background */
+    z-index: 1; /*Ensures the header stays above content when scrolling */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    border-bottom: 0px solid #ddd;
+
+}
+.settings-header h2{
+    font-weight: lighter;
+    flex: 1;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0; /* Remove default margin for proper alignment */
+}
+
+.back-button, .faq-button {
+    background: none;
+    border: none;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    border: 1px solid black;/* Adds shadow effect */;
+    border-bottom: 4px solid black;/* Adds shadow effect */
+}
+.setting-item.disabled {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #aaa; /* Grey text color */
+    cursor: default;
+    border: 10px solid #000; /* Black border */
+    pointer-events: none; /* Disables all interactions */
+    border: 1px solid black;
+    box-shadow: none; /* Remove shadow if needed */
+}
+
+.setting-item.disabled .setting-value {
+    color: #888; /* Fixed grey color for value */
+    
+    text-decoration: none; /* Remove any underline */
+}
+
+.setting-item.disabled:hover {
+    color: #aaa; /* Prevents color change on hover */
+    border: 1px solid black; /* Ensure border stays black on hover */
+}
+.back-button {
+    position: absolute;
+    left: 0;
+    padding: 30px;
+    margin-left: 10px; /* Adjust margin for desired spacing */
+    border: 1px solid black !important;
+    border-bottom: 4px solid black !important;
+}
+
+.faq-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    border: 1px solid black;/* Adds shadow effect */;
+    border-bottom: 4px solid black;/* Adds shadow effect */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 40%;
+    margin-bottom: 10px;
+    border: 4px solid white;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.edit-image-button, .logout-button {
+    padding: 5px 5px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.7em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-image-button {
+    background-color: #6a0dad;
+    font-weight: bold;
+    border-width: 1px 4px 4px 1px; /* Top, Right, Bottom, Left */
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
+    color: #fff;
+}
+
+.logout-button {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    border-width: 1px 4px 4px 1px; /* Top, Right, Bottom, Left */
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    color: #6a0dad;
+}
+
+.settings-content {
+    font-size: 17px;
+    margin-top: 0px;
+    width: 100%;
+    overflow-y: auto;
+    flex-grow: 1; /* Allows the content to grow and push the footer down */
+    padding-top: px; /* Adds more space at the top */
+    padding-bottom: 60px;
+    /* height: calc(100vh - 140px); Full height minus header and footer */
+    position: relative;
+    background-color: #F7E7EB;
+    
+    /* background: linear-gradient(to top, rgba(243, 224, 228, 0), rgba(243, 224, 228, 1) 50px); Adjust color and height as needed */
+    
+}
+.blur-overlay {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #F7E7EB(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    pointer-events: none; 
+    z-index: 10;
+}
+/* .blurred {
+    filter: blur(2px);
+    transition: filter 0.3s ease-out;
+} */
+
+.setting-item {
+    display: flex;
+    font-size: 0.9em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Adjust padding as needed */
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid black; /* Black border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
+    transition: filter 0.3s ease-in-out;
+    border-width: 1px 4px 4px 1px; /* Top, Right, Bottom, Left */
+    border-style: solid;
+    border-color: black;
+}
+
+.setting-item label {
+    color: #555;
+    text-align: left;
+    flex: 1;
+    /* width: 40%; Adjust width to control space on the left */
+    white-space: nowrap; /* Prevents label from wrapping */
+    margin-right: 10px;
+}
+
+.setting-value {
+    text-align: right;
+    flex: 1;
+    width: 60%; /* Adjust width to control space on the right */
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.setting-value:hover {
+    color: #6a0dad;
+}
+
+.arrow {
+    font-size: 1.2em;
+    color: solid black;
+    margin-left: 5px;
+    font-weight: bold;
+}
+/* Ensure no underline or link styles */
+.setting-item:link,
+.setting-item:visited {
+    text-decoration: none;
+    color: #333; /* Ensure consistent color */
+}
+.settings-footer {
+    font-size: 0.9em;
+    color: #888;
+    background-color: #F7E7EB; /* Match background */
+    border-top: 0px solid #ddd;
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0; /* Aligns it at the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the footer horizontally */
+    width: 100%; /* Ensures it spans the full width of the settings container */
+    max-width: 458px; /* Match the max width of the settings container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+    padding: 10px 0; /* Adjust padding */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-footer p {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove any padding */
+    line-height: 1.2; /* Adjust line-height to control spacing */
+    text-align: center;
+}
+
+.settings-footer .footer {
+    color: black;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Settings.css */
+.success-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.success-message span {
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.success-message button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #155724;
+    padding: 0;
+    margin-left: 10px;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.enlarged-profile-image {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 35%;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* Logout Modal Overlay */
+.logout-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: flex-end; /* Align modal at the bottom */
+    justify-content: center;
+    z-index: 100;
+    padding-bottom: 2px; /* Add some space at the bottom */
+}
+
+/* Log Out Modal Content */
+.logout-modal-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px 13px 0 0; /* Rounded corners at the top only */
+    width: 100%;
+    max-width: 440px; /* Ensure it stays centered and consistent */
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-modal-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.logout-modal-content p {
+    color: #555;
+    font-size: 0.8em;
+    
+    margin-bottom: 20px;
+    margin-left: 80px;
+    text-align: center;
+}
+
+/* Confirm Log Out Button */
+.logout-confirm-button {
+    width: 100%;
+    padding: 15px;
+    background-color:white; /* Purple background */
+    color: solid black;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-bottom:4px solid black ;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 1.3s ease;
+}
+
+.logout-confirm-button:hover {
+    background-color: white; /* Darker purple on hover */
+    border: none;
+    transition: background-color 0.6s ease;
+}
+
+/* Cancel Button */
+.logout-cancel-button {
+    width: 100%;
+    padding: 12px;
+    background-color: white; /* Light grey background */
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-cancel-button:hover {
+    background-color: #d9d9d9; /* Darker grey on hover */
+}
